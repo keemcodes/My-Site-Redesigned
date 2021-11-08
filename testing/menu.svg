@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="57.001" viewBox="0 0 64 57.001">
+  <defs>
+    <filter id="_Color" x="0" y="0" width="64" height="57.001" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon_navigation_menu_24px" data-name="icon/navigation/menu_24px" transform="translate(10.5 1.5)">
+    <rect id="Boundary" width="24" height="24" transform="translate(22)" fill="none"/>
+    <g transform="matrix(1, 0, 0, 1, -10.5, -1.5)" filter="url(#_Color)">
+      <path id="_Color-2" data-name=" ↳Color" d="M43,36H0V30H43v6Zm0-15H0V15H43v6ZM43,6H0V0H43V6Z" transform="translate(10.5 7.5)" fill="#0080ff" stroke="#0080ff" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="3"/>
+    </g>
+  </g>
+</svg>
