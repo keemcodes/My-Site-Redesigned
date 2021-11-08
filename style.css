@@ -15,7 +15,13 @@
 }
 
 
+/* Review this please 7:00pm 11/8 */
+html, body {
+    min-height: 100%;
+}
+
 body {
+    /* position: absolute; */
     background: var(--bg-color);
     background-repeat: no-repeat;
     letter-spacing: 1px;
