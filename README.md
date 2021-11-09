@@ -11,3 +11,6 @@ Currently still in the design phase
 
 ### Design
 ![Screenshot of Design](mysite.png)
+
+### Updated Design
+![Screenshot of Updated Design](UpdatedDesign.png)
