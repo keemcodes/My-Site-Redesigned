@@ -9,6 +9,11 @@ Currently still in the design phase
 * The next page will always be preloaded into a hidden div
 * User can view the next page by scrolling down, this action will unhide and fade the rrequested page in
 
+### First Commit Notes 11/08/2021
+* As you can see I made my first commit to this today :)
+* I decided I'm going to code out the initial draft of my portfolio site in basic html/css.
+** After the initial draft, I'm going to be refactoring the code React
+
 ### Design
 ![Screenshot of Design](mysite.png)
 
