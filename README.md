@@ -1,6 +1,7 @@
 # My-Site-Redesigned
 
-Currently still in the design phase
+~~Currently still in the design phase~~
+Currently in coding phase 11/08/2021 :)
 
 ### What is to come? How will it function?
 * Site will be designed as a Single Page App (SPA) since it'll be a portfolio site
@@ -13,6 +14,12 @@ Currently still in the design phase
 * As you can see I made my first commit to this today :)
 * I decided I'm going to code out the initial draft of my portfolio site in basic html/css.
 ** After the initial draft, I'm going to be refactoring the code React
+
+### Multiple Commits Later... 11/10/2021
+* Completed home and about me page (could use a little more work)
+* I learned how to wrap a text block around an image using float :)
+* I also messed around and learned alot about pseudo elements.
+* I went ahead and deployed the [website to a server](http://keemcodes.com)
 
 ### Design
 ![Screenshot of Design](mysite.png)
