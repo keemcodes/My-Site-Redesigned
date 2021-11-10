@@ -22,7 +22,7 @@ Currently in coding phase 11/08/2021 :)
 * I went ahead and deployed the [website to a server](http://keemcodes.com)
 
 ### Bug Fixes
-[ ] fix issue with right margin on pseudo ::after element outstretching page width on mobile 
+- [ ] fix issue with right margin on pseudo ::after element outstretching page width on mobile 
 
 
 ### Design
