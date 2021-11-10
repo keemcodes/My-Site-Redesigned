@@ -20,6 +20,7 @@ Currently in coding phase 11/08/2021 :)
 * I learned how to wrap a text block around an image using float :)
 * I also messed around and learned alot about pseudo elements.
 * I went ahead and deployed the [website to a server](http://keemcodes.com)
+* Also, I'm developing mobile first. ill later scale the design out for desktop and tablet displays
 
 ### Bug Fixes
 - [ ] fix issue with right margin on pseudo ::after element outstretching page width on mobile 
