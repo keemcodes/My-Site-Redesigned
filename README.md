@@ -23,7 +23,7 @@ Currently in coding phase 11/08/2021 :)
 * Also, I'm developing mobile first. ill later scale the design out for desktop and tablet displays
 
 ### Bug Fixes
-- [ ] fix issue with right margin on pseudo ::after element outstretching page width on mobile 
+- [x] fix issue with right margin on pseudo ::after element outstretching page width on mobile 
 - [ ] fix issue with certain fonts not appearing. might need to import fonts the old fashion way instead of directly into css file
 
 
