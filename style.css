@@ -144,6 +144,11 @@ header .hamburger-menu {
     font-size: 31px;
 }
 
+.section-languages {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
 
 button {
     font-family: 'Fredoka One', sans-serif;
@@ -222,6 +227,35 @@ p b {
     color: var(--my-white);
     font-weight: 600;
 }
+
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+
+li {
+    margin-bottom: 3px;
+    color: var(--my-white);
+    font-family: 'Bebas Neue', sans-serif;
+}
+li::before {
+    content: "";
+    /* background-color: var(--my-blue); */
+    border: 5px solid var(--my-blue);
+    border-radius: 50%;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin-right: 5px;
+    /* padding-top: 5px; */
+} 
+/* li::before {
+    font-family: "Font Awesome 5 Free"; 
+    font-size: 12px;
+    margin-right: 5px;
+    content: "\f192";
+    color:#0080FF;
+}  */
 
 ::-webkit-scrollbar {
     width: 10px;
