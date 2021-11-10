@@ -76,7 +76,9 @@ p {
   border-radius: 50%;
 }
 
-.timeline .timeline-container .timeline-body {
+
+
+.timeline .timeline-container .timeline-inner-body {
   background: #27293d;
   border-radius: 3px;
   padding: 20px 20px 15px;
@@ -91,15 +93,32 @@ p {
   display: block;
   position: absolute;
   left: -10px;
-  transform: rotate(45deg);
   border-radius: 0 0 0 2px;
 }
 
-.timeline .timeline-container .timeline-body .timeline-title {
+.timeline-body {
+  position: relative;
+}
+
+.timeline-inner-square {
+  /* content: ""; */
+  background: inherit;
+  width: 50px;
+  height: 50px;
+  display: block;
+  position: absolute;
+  top: -40px;
+  right: 0px;
+  border-radius: 0 0 0 2px;
+  background: #27293d;
+
+}
+
+.timeline .timeline-container .timeline-inner-body .timeline-title {
   margin-bottom: 1.4rem;
 }
 
-.timeline .timeline-container .timeline-body .timeline-title .badge {
+.timeline .timeline-container .timeline-inner-body .timeline-title .badge {
   background: #4f537b;
   padding: 4px 8px;
   border-radius: 3px;
@@ -107,7 +126,7 @@ p {
   font-weight: bold;
 }
 
-.timeline .timeline-container .timeline-body .timeline-subtitle {
+.timeline .timeline-container .timeline-inner-body .timeline-subtitle {
   font-weight: 300;
   font-style: italic;
   opacity: 0.4;
