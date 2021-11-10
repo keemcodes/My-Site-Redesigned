@@ -131,6 +131,38 @@ header .hamburger-menu {
 
 }
 
+.timeline {
+    position: relative;
+    /* Temporary height */
+    height: 400px;
+}
+
+.timeline::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--my-blue);
+}
+
+.timeline-date {
+    position: absolute;
+    font-family: 'Russo One', sans-serif;
+    font-size: 10px; 
+    color: var(--my-white);
+    bottom: 5px;
+}
+
+.timeline-arrow {
+    position: absolute;
+    bottom: 0px;
+    left: 90px;
+
+}
+
 /* .section-title, .section-body {
     margin-left: 15px;
 } */
