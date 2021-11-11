@@ -1,5 +1,7 @@
 :root {
     --bg-color: radial-gradient( #1B3F91, #292D36);
+    --nav-bg-color: radial-gradient( rgb(27, 63, 145, 80%), rgb(41, 45, 54, 80%));
+    /* --nav-bg-color: radial-gradient( #1B3F91, #292D36 80%, transparent 70%); */
     --my-white: #DEDEDE;
     --my-blue: #0080FF;
     --my-grey: #979DAC;
@@ -25,22 +27,22 @@ body {
     /* overflow-x: hidden; */
 }
 
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    /* position: fixed; */
     width: 100%;
-}
-/* header {
+} */
+header {
+    z-index: 1;
     position: fixed;
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
     width: 100%;
-    background: var(--bg-color);
-    opacity: 80%;
-} */
+    background: var(--nav-bg-color);
+    opacity: 100%;
+}
 
 header .logo {
     margin-left: 10px;
@@ -250,6 +252,27 @@ header .hamburger-menu {
     color: var(--my-blue);
     font-size: 20px;
 }
+.timeline-top-right img, .timeline-top-right object {
+    color: var(--my-blue);
+    width: 22px;
+    height: 22px;
+}
+
+.timeline-top-right svg {
+    color: var(--my-blue);
+    fill: var(--my-blue);
+
+}
+.timeline-top-right path {
+    color: var(--my-blue);
+    fill: var(--my-blue);
+
+}
+.timeline-top-right object:nth-of-type(2), .timeline-top-right img:nth-of-type(2) {
+    width: 18px;
+    height: 18px;
+}
+
 .timeline-top-right i:nth-of-type(1) {
     /* font-size: 23px; */
     /* margin-left: 10px; */
