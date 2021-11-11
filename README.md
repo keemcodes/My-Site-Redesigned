@@ -22,10 +22,13 @@ Currently in coding phase 11/08/2021 :)
 * I went ahead and deployed the [website to a server](http://keemcodes.com)
 * Also, I'm developing mobile first. ill later scale the design out for desktop and tablet displays
 
-### Bug Fixes
+### Bug Fixes 11/10/2021
 - [x] fix issue with right margin on pseudo ::after element outstretching page width on mobile 
 - [x] fix issue with certain fonts not appearing. might need to import fonts the old fashion way instead of directly into css file
 
+## Bug Fixes 11/11/2021
+- [ ] fix issue with fontawesome tab icons on iphone and firefox not appearing
+- [ ] fix issue with fontawesome (remove it from codebase and use svgs instead :/)
 
 ### Design
 ![Screenshot of Design](mysite.png)
