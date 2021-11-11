@@ -4,6 +4,7 @@
     --my-blue: #0080FF;
     --my-grey: #979DAC;
     --my-dark: #292D36;
+    --my-ldark: #3C414D;
 }
 
 * {
@@ -136,9 +137,12 @@ header .hamburger-menu {
 .timeline-container {
     display: block;
     position: relative;
-    height: 125px;
+    height: 135px;
+    max-width: 400px;
 }
-
+.timeline-container:nth-of-type(1) {
+    margin-top: 30px;
+}
 .timeline::before {
     content: "";
     display: block;
@@ -179,22 +183,73 @@ header .hamburger-menu {
 .timeline-title {
     position: absolute;
     font-family: 'Russo One', sans-serif;
-    font-size: 12px;
+    font-size: 10px;
     color: var(--my-white);
     top: -17px;
     left: 146px;
 
 }
 
+.timeline-inner-body {
+    width: 50vw;
+    max-width: 300px;
+}
+
 .timeline-body {
     position: absolute;
     top: 0px;
     left: 130px;
-    width: 250px;
-    height: 80px;
-    border: 3px solid var(--my-blue);
-    border-radius: 15px;
+    width: auto;
+    /* max-width: 300px; */
+    height: auto;
+    background-color: var(--my-ldark);
+    /* border: 3px solid var(--my-blue); */
+    border-radius: 5px;
+    
+    padding: 3px 10px;
 }
+/* .timeline-top-right {
+    z-index: -1;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    width: 10vw;
+    height: auto;
+    background-color: var(--my-ldark);
+    border-radius: 15px;
+    padding: 3px 10px;
+} */
+
+.timeline-top-right {
+    display: flex;
+    justify-content: space-around;
+    z-index: -1;
+    position: absolute;
+    top: -25px;
+    right: 0;
+    width: 65px;
+    /* max-width: 300px; */
+    height: 62px;
+    background-color: var(--my-ldark);
+    /* border: 3px solid var(--my-blue); */
+    border-radius: 5px;
+    padding: 5px 3px;
+    
+}
+
+.timeline-top-right i {
+    color: var(--my-blue);
+    font-size: 20px;
+}
+.timeline-top-right i:nth-of-type(1) {
+    /* font-size: 23px; */
+    /* margin-left: 10px; */
+}
+.timeline-top-right i:nth-of-type(2) {
+    /* padding-top: 10px; */
+    font-size: 17px;
+}
+
 /* .section-title, .section-body {
     margin-left: 15px;
 } */
@@ -324,6 +379,8 @@ li::before {
     margin-right: 5px;
     /* padding-top: 5px; */
 } 
+
+
 /* li::before {
     font-family: "Font Awesome 5 Free"; 
     font-size: 12px;
