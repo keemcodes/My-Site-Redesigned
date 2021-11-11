@@ -5,6 +5,7 @@
     --my-white: #DEDEDE;
     --my-blue: #0080FF;
     --my-grey: #979DAC;
+    --my-dgrey: #4E566A;
     --my-dark: #292D36;
     --my-ldark: #3C414D;
 }
@@ -282,6 +283,87 @@ header .hamburger-menu {
     font-size: 17px;
 }
 
+.experience-body {
+    height: 305px;
+}
+
+.tabs-container{
+    position: relative;
+    background: var(--my-dgrey);
+    width: 90px;
+    min-height: 100%;
+    float: left;
+    z-index: 20;
+    border-radius: 10px 0 0 10px;
+
+
+ 
+ }
+ /* tabs names */
+ .tabs-container label{
+    position: relative;
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+    font-size: 13px;
+    color: #fff;
+    cursor: pointer;
+    user-select: none;
+    font-family: 'Russo One', sans-serif;
+    font-size: 10px;  
+    text-align: center;  
+ }
+ 
+ /* Hover effect on tabs names */
+ .tabs-container label:hover{
+   background: rgba(0, 0, 0, 0.2);
+ 
+ }
+ /* Content area for tabs */
+ .tab-content{
+    position: relative;
+    background: var(--my-ldark);
+    width: calc(100% - 90px);
+    min-height: 100%;
+    padding: 15px;
+    float: left;
+    box-sizing: border-box;
+    z-index: 19;
+    display: none;
+    border-radius: 0 10px 10px 0;
+ }
+ 
+ .tab-content:after{
+    content: "";
+    clear: both;
+ 
+ }
+  /* Hide input radio from users */
+ input[name="tab"]{
+   display: none;
+ }
+  /* Show tab when input checked */
+ input[name="tab"]:checked + .tab-content{
+     display: block;
+   /* animation: slide 0.5s forwards; */
+ 
+ }
+
+ 
+ /* Slide animation for tab contents */
+ @keyframes slide{
+     from{
+         left: -100%;
+         opacity: 0;
+     }
+     to{
+         left: 0;
+         opacity: 1;
+     }
+ 
+ }
+ 
+
 /* .section-title, .section-body {
     margin-left: 15px;
 } */
@@ -382,6 +464,14 @@ h1:after {
     width: 65%;
 }
 
+h3 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 12px;
+    color: var(--my-white);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 p {
     font-family: 'Work Sans', sans-serif;
     font-size: 12px;
@@ -417,11 +507,16 @@ li::before {
     /* padding-top: 5px; */
 } 
 
-.timeline-body li {
+.timeline-body li, .tab-content li {
     font-size: 12px;
     display: inline;
 }
-.timeline-body li::before {
+
+.tab-content ul {
+    margin-top: 10px;
+}
+
+.timeline-body li::before, .tab-content li::before {
     border: 4px solid var(--my-blue);
 
 }
