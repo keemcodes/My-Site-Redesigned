@@ -148,7 +148,7 @@ header .hamburger-menu {
     display: block;
     position: absolute;
     left: 70px;
-    bottom: 0;
+    top: -15px;
     width: 4px;
     height: 100%;
     background: var(--my-blue);
