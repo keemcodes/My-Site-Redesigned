@@ -3,8 +3,10 @@
     --nav-bg-color: radial-gradient( rgb(27, 63, 145, 80%), rgb(41, 45, 54, 80%));
     /* --nav-bg-color: radial-gradient( #1B3F91, #292D36 80%, transparent 70%); */
     --my-white: #DEDEDE;
+    --my-rwhite: #ffffff;
     --my-blue: #0080FF;
-    --my-grey: #979DAC;
+    /* --my-grey: #979DAC; */
+    --my-grey: #DEDEDE;
     --my-dgrey: #4E566A;
     --my-dark: #292D36;
     --my-ldark: #3C414D;
@@ -55,7 +57,7 @@ header .hamburger-menu {
 
 .page-title {
     font-family: 'Russo One', sans-serif;
-    color: var(--my-white);
+    color: var(--my-rwhite);
     font-size: 46px;
 }
 
@@ -150,7 +152,9 @@ header .hamburger-menu {
     display: block;
     position: relative;
     height: 190px;
-    max-width: 400px;
+    /* max-width: 400px; */
+    max-width: 685px;
+
 }
 .timeline-container:nth-of-type(1) {
     margin-top: 30px;
@@ -171,7 +175,7 @@ header .hamburger-menu {
     position: absolute;
     font-family: 'Russo One', sans-serif;
     font-size: 10px; 
-    color: var(--my-white);
+    color: var(--my-rwhite);
     top: 33px;
 }
 
@@ -196,7 +200,7 @@ header .hamburger-menu {
     position: absolute;
     font-family: 'Russo One', sans-serif;
     font-size: 10px;
-    color: var(--my-white);
+    color: var(--my-rwhite);
     top: -17px;
     left: 104px;
 
@@ -287,7 +291,7 @@ header .hamburger-menu {
     height: 305px;
 }
 
-.tabs-container{
+.tabs-container {
     position: relative;
     background: var(--my-dgrey);
     width: 90px;
@@ -298,7 +302,7 @@ header .hamburger-menu {
 
 
  
- }
+}
  /* tabs names */
  .tabs-container label{
     position: relative;
@@ -312,15 +316,21 @@ header .hamburger-menu {
     font-family: 'Russo One', sans-serif;
     font-size: 10px;  
     text-align: center;  
- }
+}
  
  /* Hover effect on tabs names */
- .tabs-container label:hover{
-   background: rgba(0, 0, 0, 0.2);
- 
- }
+ .tabs-container label:hover {
+    background: rgba(0, 0, 0, 0.2);
+    /* border-radius: inherit; */
+}
+
+ .tabs-container label:first-of-type:hover {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px 0px 0px 0px;
+}
+
  /* Content area for tabs */
- .tab-content{
+ .tab-content {
     position: relative;
     background: var(--my-ldark);
     width: calc(100% - 90px);
@@ -331,23 +341,42 @@ header .hamburger-menu {
     z-index: 19;
     display: none;
     border-radius: 0 10px 10px 0;
- }
+}
  
- .tab-content:after{
+ .tab-content:after {
     content: "";
     clear: both;
  
- }
+}
+
+.contact-body, .contact-buttons {
+    /* width: 130px; */
+    margin: 10px 0px;
+    text-align: center;
+
+} 
+
+ .contact-buttons {
+    display: flex;
+    justify-content: center;
+    /* width: 130px; */
+
+}
+ .contact-buttons button {
+    width: 130px;
+    margin: 0px 10px;
+    font-size: 12px;
+}
   /* Hide input radio from users */
- input[name="tab"]{
+ input[name="tab"] {
    display: none;
- }
+}
   /* Show tab when input checked */
  input[name="tab"]:checked + .tab-content{
      display: block;
    /* animation: slide 0.5s forwards; */
  
- }
+}
 
  
  /* Slide animation for tab contents */
@@ -400,7 +429,8 @@ button {
 }
 
 section:not(:first-of-type) {
-    margin: 0px 16px;
+    /* margin: 0px 16px; */
+    padding: 0px 16px;
 }
 
 
@@ -425,7 +455,7 @@ section:nth-of-type(1) {
 h1 {
     overflow: hidden;
     text-align: center;
-    color: var(--my-white);
+    color: var(--my-rwhite);
     font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 5px;
     font-weight: 300;
@@ -435,7 +465,7 @@ h1 {
 
 h2 {
     font-family: 'Russo One', sans-serif;
-    color: var(--my-white);
+    color: var(--my-rwhite);
     font-size: 22px;
     margin-bottom: 10px;
 }
@@ -467,7 +497,7 @@ h1:after {
 h3 {
     font-family: 'Russo One', sans-serif;
     font-size: 12px;
-    color: var(--my-white);
+    color: var(--my-rwhite);
     margin-bottom: 10px;
     text-align: center;
 }
@@ -481,7 +511,7 @@ p {
 
 p b {
     /* text-decoration: none; */
-    color: var(--my-white);
+    color: var(--my-rwhite);
     font-weight: 600;
 }
 
@@ -492,7 +522,7 @@ ul {
 
 li {
     margin-bottom: 3px;
-    color: var(--my-white);
+    color: var(--my-rwhite);
     font-family: 'Bebas Neue', sans-serif;
 }
 li::before {
