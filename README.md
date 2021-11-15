@@ -1,3 +1,6 @@
+# React Development Changelog 11/15/2021
+* Implemented
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

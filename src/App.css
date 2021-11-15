@@ -27,7 +27,6 @@ body {
   background: var(--bg-color);
   background-repeat: no-repeat;
   letter-spacing: 1px;
-  /* overflow-x: hidden; */
 }
 
 /* header {
@@ -76,7 +75,7 @@ nav {
   /* display: flex; */
   justify-content: center;
   align-items: center;
-  margin-top: -7px;
+  /* margin-top: -7px; */
   height: 60px;
 }
 
@@ -767,6 +766,9 @@ hr {
 /* Breakpoint from mobile to desktop*/
 @media (min-width: 732px) {
 
+  body {
+    /* overflow-y: hidden; */
+  }
 	nav {
 		display: flex;
 	}
