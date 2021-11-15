@@ -6,12 +6,14 @@ import About from './components/about';
 import Projects from './components/projects';
 import Employment from './components/employment';
 import Contact from './components/contact';
+// import Menu from './components/menu';
 
 function App() {
   return (
     <>
       <Header />
       <main>
+        {/* <Menu /> */}
         <Home />
         <About />
         <Projects />
