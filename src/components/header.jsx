@@ -31,31 +31,35 @@ function Header() {
         transition: 'top 0.6s'
     }        
     return ( 
-        <header style={{ ...navbarStyles, top: visible ? '0' : '-60px' }}>
-            <div className="nav-align">
-                <div className="logo">
-                    <img src="/images/logo.svg" alt="" />
-                </div>
-                <div className="hamburger-menu">
-                    {/* <img src="/images/menu.svg" alt="" /> */}
-                    <div class="ham-menu">
-                        <span id="1"></span>
-                        <span id="2"></span>
-                        <span id="3"></span>
-                        <span id="4"></span>
+        <header>
+            <div className="top-navigation" style={{ ...navbarStyles, top: visible ? '0' : '-60px' }}>
+            
+            
+                <div className="nav-align">
+                    <div className="logo">
+                        <img src="/images/logo.svg" alt="" />
+                    </div>
+                    <div className="hamburger-menu">
+                        {/* <img src="/images/menu.svg" alt="" /> */}
+                        <div class="ham-menu">
+                            <span id="1"></span>
+                            <span id="2"></span>
+                            <span id="3"></span>
+                            <span id="4"></span>
+                        </div>
                     </div>
                 </div>
+                <nav>
+                    <ul>
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Projects</li>
+                        <li>Employment</li>
+                        <li>Contact</li>
+                    </ul>
+                    <button>Resume</button>
+                </nav>    
             </div>
-            <nav>
-                <ul>
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Projects</li>
-                    <li>Employment</li>
-                    <li>Contact</li>
-                </ul>
-                <button>Resume</button>
-            </nav>    
             <div className="active-menu">
                 {/* <h1>NuLife Marketing</h1> */}
                 <ul>
