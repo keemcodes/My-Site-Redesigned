@@ -674,7 +674,7 @@ hr {
   display: none;
 	/* display: unset; */
 	/* transform:translateX(110%); */
-	z-index: 1;
+	/* z-index: 1; */
 	position: fixed;
 	right: 0;
 	width: 65%;
@@ -687,9 +687,9 @@ hr {
 }
 
 .menu-active {
-	/* display: unset; */
+	display: unset;
 	/* opacity: 1; */
-	transform:translateX(0%);
+	/* transform:translateX(0%); */
 
 }
 
@@ -747,6 +747,10 @@ hr {
 	align-items: center;
 	text-align: center;	
 	
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 

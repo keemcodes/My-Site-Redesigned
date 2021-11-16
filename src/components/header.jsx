@@ -10,7 +10,7 @@ function Header() {
     
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
-    
+    const [menu, setMenu] = useState();
     const handleScroll = debounce(() => {
         const currentScrollPos = window.pageYOffset;
     
@@ -25,11 +25,16 @@ function Header() {
         return () => window.removeEventListener('scroll', handleScroll);
     
     }, [prevScrollPos, visible, handleScroll]);
-    
+
     const navbarStyles = {
         position: 'fixed',
         transition: 'top 0.6s'
     }        
+
+    // function handleMenuClick(e) {
+    //     e.preventDefault();
+    //     alert("this");
+    // }
     return ( 
         <header>
             <div className="top-navigation" style={{ ...navbarStyles, top: visible ? '0' : '-60px' }}>
@@ -41,7 +46,7 @@ function Header() {
                     </div>
                     <div className="hamburger-menu">
                         {/* <img src="/images/menu.svg" alt="" /> */}
-                        <div class="ham-menu">
+                        <div className="ham-menu" onClick={() => setMenu(!menu)}>
                             <span id="1"></span>
                             <span id="2"></span>
                             <span id="3"></span>
@@ -60,7 +65,7 @@ function Header() {
                     <button>Resume</button>
                 </nav>    
             </div>
-            <div className="active-menu">
+            <div className={`active-menu nav ${menu ? "menu-active" : ""}`} >
                 {/* <h1>NuLife Marketing</h1> */}
                 <ul>
                     <li className="home-link"><a href="#home">Home</a></li>
