@@ -117,13 +117,15 @@ nav button {
 .page-title {
   font-family: 'Russo One', sans-serif;
   color: var(--my-rwhite);
-  font-size: 46px;
+  font-size: clamp(46px, 8vw, 80px);
 }
 
 .page-photo-icon img {
   border-radius: 50%;
   height: 100px;
   width: 100px;
+  /* height: clamp(100px, 50%, 150px);
+  width: clamp(100px, 50%, 150px); */
   border: 3px solid var(--my-blue);
 }
 
@@ -350,7 +352,7 @@ nav button {
 }
 
 .experience-body {
-  height: 305px;
+  height: 330px;
   max-width: 500px;
   margin: 0 auto;
 }
@@ -466,12 +468,15 @@ input[name="tab"]:checked + .tab-content{
 
 .page-intro {
   color: var(--my-blue);
-  font-size: 31px;
+  /* font-size: 31px; */
+  font-size: clamp(31px, 8vw, 52px);
 }
 
 .page-description {
   color: var(--my-grey);
-  font-size: 31px;
+  /* font-size: 31px; */
+  font-size: clamp(31px, 8vw, 52px);
+
 }
 
 .section-languages {
@@ -489,6 +494,7 @@ button {
   height: 34px;
   border-radius: 5px;
   font-size: 14px;
+  
 }
 
 section:not(:first-of-type) {
