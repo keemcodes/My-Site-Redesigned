@@ -2,7 +2,10 @@ import React, { useState, useEffect } from 'react';
 // import { Component } from 'react';
 // import React, { Component } from 'react';
 import { debounce } from '../utilities/helpers';
-import { Link, animateScroll as scroll } from "react-scroll";
+// import * as Scroll from 'react-scroll';
+import { Link } from "react-scroll";
+// import { Link, scrollSpy, animateScroll as scroll } from "react-scroll";
+// import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll';
 
 // import '../css/header.css';
 function Header() {
@@ -63,15 +66,17 @@ function Header() {
                         <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500}>Employment</Link></li>
                         <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500}>Contact</Link></li>
                     </ul>
-                    <button activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500}>Resume</button>
+                    <button>Resume</button>
                 </nav>    
             </div>
             <div className={`active-menu nav ${menu ? "menu-active" : ""}`} >
                 {/* <h1>NuLife Marketing</h1> */}
                 <ul>
-                    <li className="home-link"><a href="#home">Home</a></li>
-                    <li className="about-link"><a href="#about">About</a></li>
-                    <li className="contact-link"><a href="#contact">Contact</a></li>
+                    <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} duration={500}>Home</Link></li>
+                    <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} duration={500}>About</Link></li>
+                    <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} duration={500}>Projects</Link></li>
+                    <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500}>Employment</Link></li>
+                    <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500}>Contact</Link></li>
                 </ul>
             </div>                        
         </header>

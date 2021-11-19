@@ -23,6 +23,8 @@ html, body {
   min-height: 100%;
 }
 
+
+
 body {
   background: var(--bg-color);
   background-repeat: no-repeat;
@@ -111,6 +113,10 @@ nav button {
   border-radius: 5px;
   font-size: 14px;
 
+}
+
+a, button{
+  cursor: pointer;
 }
 
 
@@ -759,6 +765,10 @@ hr {
 
 .no-scroll {
   overflow-y: hidden;
+}
+
+.active-nav-link {
+  color: var(--my-blue) !important;
 }
 
 
