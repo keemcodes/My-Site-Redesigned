@@ -5,7 +5,7 @@ class Contact extends Component {
     state = {  }
     render() { 
         return ( 
-            <section>
+            <section id='contact'>
                 <div className="heading-title">
                     <h1>Contact Me</h1>
                 </div>

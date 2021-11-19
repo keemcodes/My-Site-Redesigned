@@ -6,7 +6,7 @@ class Projects extends Component {
     state = {  }
     render() {
         return ( 
-            <section>
+            <section id='projects'>
                 <div className="heading-title">
                     <h1>Projects</h1>
                 </div>
