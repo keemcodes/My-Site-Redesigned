@@ -5,7 +5,7 @@ class Home extends Component {
     state = {  }
     render() { 
         return ( 
-            <section className="home" id='home'>
+            <>
                 <div className="page-title">Hello World!</div>
                 <div className="page-photo-icon">
                     <img src="/images/me.png" alt="" />
@@ -13,7 +13,7 @@ class Home extends Component {
                 <div className="page-intro">My name is Keem</div>
                 <div className="page-description">I design and build apps</div>
                 <div className="page-button"><button>REACH ME</button></div>
-            </section>
+            </>
         );
     }
 }

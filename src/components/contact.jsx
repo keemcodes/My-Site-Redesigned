@@ -5,7 +5,7 @@ class Contact extends Component {
     state = {  }
     render() { 
         return ( 
-            <section id='contact'>
+            <>
                 <div className="heading-title">
                     <h1>Contact Me</h1>
                 </div>
@@ -20,7 +20,7 @@ class Contact extends Component {
                     <button>EMAIL ME</button>
                 </div>
                 
-            </section>
+            </>
         );
     }
 }

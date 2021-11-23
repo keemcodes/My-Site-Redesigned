@@ -5,7 +5,7 @@ class Employment extends Component {
     state = {  }
     render() { 
         return ( 
-            <section id='employment'>
+            <>
                 <div className="heading-title">
                     <h1>Employment</h1>
                 </div>
@@ -37,7 +37,7 @@ class Employment extends Component {
                         langs={['PHP', 'JS']}
                     />
                 </div>
-            </section>
+            </>
         );
     }
 }
