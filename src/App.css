@@ -215,7 +215,8 @@ a, button{
 .timeline-container {
   display: block;
   position: relative;
-  height: 190px;
+  /* height: 190px; */
+  height: 230px;
   /* max-width: 400px; */
   max-width: 685px;
 
@@ -235,6 +236,18 @@ a, button{
   border-radius: 25px;
 }
 
+/* .timeline::before {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 37px;
+  top: -15px;
+  width: 4px;
+  height: 100%;
+  background: var(--my-blue);
+  border-radius: 25px;
+} */
+
 .timeline-date {
   position: absolute;
   font-family: 'Russo One', sans-serif;
@@ -243,12 +256,27 @@ a, button{
   top: 33px;
 }
 
+/* .timeline-date {
+  position: absolute;
+  font-family: 'Russo One', sans-serif;
+  font-size: 10px;
+  color: var(--my-rwhite);
+  top: 33px;
+  word-spacing: 9999px;
+} */
+
 .timeline-arrow {
   position: absolute;
   top: 30px;
   left: 70px;
 
 }
+
+/* .timeline-arrow {
+  position: absolute;
+  top: 35px;
+  left: 46px;
+} */
 
 /* .timeline-body {
   position: absolute;
@@ -270,6 +298,15 @@ a, button{
 
 }
 
+/* .timeline-title {
+    position: absolute;
+    font-family: 'Russo One', sans-serif;
+    font-size: 10px;
+    color: var(--my-rwhite);
+    top: -17px;
+    left: 79px;
+} */
+
 .timeline-inner-body {
   width: 50vw;
   max-width: 300px;
@@ -280,14 +317,25 @@ a, button{
   top: 0px;
   left: 97px;
   width: auto;
-  /* max-width: 300px; */
   height: auto;
   background-color: var(--my-ldark);
-  /* border: 3px solid var(--my-blue); */
   border-radius: 5px;
   
   padding: 3px 10px;
 }
+
+/* .timeline-body {
+  position: absolute;
+  top: 0px;
+  left: 73px;
+  width: auto;
+  height: auto;
+  background-color: var(--my-ldark);
+  border-radius: 5px;
+  padding: 3px 10px;
+} */
+
+
 /* .timeline-top-right {
   z-index: -1;
   position: absolute;
@@ -770,6 +818,9 @@ hr {
 .active-nav-link {
   color: var(--my-blue) !important;
 }
+.disable-background {
+  background: none;
+}
 
 .fade-in-section {
   opacity: 0;
@@ -819,5 +870,33 @@ hr {
   header .hamburger-menu {
     display: none;
   }
+  h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+    width: 10%;
+  }
+  
+  h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+    width: 50%;
+  }
+  
 	
+}
+
+@media (min-width: 982px) {
+  h1:before {
+    right: 0.5em;
+    margin-left: -50%;
+    width: 10%;
+  }
+
+  h1:after {
+    left: 0.5em;
+    margin-right: -50%;
+    width: 35%;
+  }
+
+
 }

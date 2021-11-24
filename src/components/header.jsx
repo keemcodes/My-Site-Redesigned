@@ -41,7 +41,7 @@ function Header() {
     // }
     return ( 
         <header>
-            <div className="top-navigation" style={{ ...navbarStyles, top: visible ? '0' : '-60px' }}>
+            <div className={`top-navigation ${menu ? 'disable-background' : ''}`} style={{ ...navbarStyles, top: visible ? '0' : '-60px' }}>
             
             
                 <div className="nav-align">
@@ -66,7 +66,7 @@ function Header() {
                         <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500}>Employment</Link></li>
                         <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500}>Contact</Link></li>
                     </ul>
-                    <button>Resume</button>
+                    <a href="resume.pdf"><button>Resume</button></a>
                 </nav>    
             </div>
             <div className={`active-menu nav ${menu ? "menu-active" : ""}`} >
@@ -78,6 +78,7 @@ function Header() {
                     <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500}>Employment</Link></li>
                     <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500}>Contact</Link></li>
                 </ul>
+                <a href="resume.pdf"><button>Resume</button></a>
             </div>                        
         </header>
     );

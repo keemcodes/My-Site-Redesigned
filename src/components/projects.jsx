@@ -13,15 +13,15 @@ class Projects extends Component {
                 <div className="outter-timeline">
                     <div className="timeline">
                         <TimelineContainer 
-                            date='Feb. 2021'
-                            title='Press Release API'
-                            body={<p>Press Release data provided via API is ingested and parsed into a <b>readable HTML format</b>.</p>}
+                            date='July 2021'
+                            title='E.I. App'
+                            body={<p>Built an application supporting over <b>50,000 internal users</b> in submitting weekly initaitives and requesting co-worker support</p>}
                             langs={['PHP', 'JS']}
                         />
                         <TimelineContainer 
-                            date='Feb. 2022'
-                            title='Press Release API'
-                            body={<p>Press Release data provided via API is ingested and parsed into a <b>readable HTML format</b>.</p>}
+                            date='Mar. 2020'
+                            title='S.W.T. App'
+                            body={<p>Designed and built an application that ingests <b>motion sensor data from an API.</b> Data is used to provide Airport Security Checkpoint Wait Times to passengers</p>}
                             langs={['PHP', 'JS']}
                         />
                         <TimelineContainer 
