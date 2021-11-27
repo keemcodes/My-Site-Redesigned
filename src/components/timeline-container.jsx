@@ -1,80 +1,37 @@
-import React, { Component } from 'react';
-// import '../css/header.css';
+import React from 'react';
 
-class TimelineContainer extends Component {
-    state = {  }
-    render() { 
-        // const date = 'Feb. 2020';
-        return ( 
-            <div className="timeline-container">
-                <div className="timeline-date">
-                    {this.props.date}
-                    {/* {date} */}
+function TimelineContainer(props) {
+    return ( 
+        <div className="timeline-container">
+            <div className="timeline-date">
+                {props.date}
+                {/* {date} */}
+            </div>
+            <div className="timeline-arrow">
+                <img src="/images/triangle.svg" alt="" />
+            </div>
+            <div className="timeline-outter-body">
+                <div className="timeline-title">
+                    {props.title}
                 </div>
-                <div className="timeline-arrow">
-                    <img src="/images/triangle.svg" alt="" />
-                </div>
-                <div className="timeline-outter-body">
-                    <div className="timeline-title">
-                        {this.props.title}
+                <div className="timeline-inner-body">
+                    <div className="timeline-body">
+                        {props.body}
+                        <hr />
+                        <ul>
+                            {props.langs.map((lang, index) => (
+                                <li key={index}>{lang} </li>
+                            ))}
+                        </ul>
                     </div>
-                    <div className="timeline-inner-body">
-                        <div className="timeline-body">
-                            {this.props.body}
-                            <hr />
-                            <ul>
-                                {this.props.langs.map((lang, index) => (
-                                    <li key={index}>{lang} </li>
-                                ))}
-                            </ul>
-                        </div>
-                        <div className="timeline-top-right">
-                            {/* <i className="fab fa-github-alt"></i>
-                            <i className="fas fa-external-link-alt"></i> */}
-                            <a href={this.props.github} ><i className="fab fa-github-alt"></i></a>
-                            <a href={this.props.external} ><i className="fas fa-external-link-alt"></i></a>
-                        </div>
+                    <div className="timeline-top-right">
+                        <a href={props.github} ><i className="fab fa-github-alt"></i></a>
+                        <a href={props.external} ><i className="fas fa-external-link-alt"></i></a>
                     </div>
                 </div>
             </div>
-        );
-    }
+        </div>
+    );
 }
 
-// function TimelineContainer(props) {
-//     return ( 
-//         <div className="timeline-container">
-//             <div className="timeline-date">
-//                 {props.date}
-//                 {/* {date} */}
-//             </div>
-//             <div className="timeline-arrow">
-//                 <img src="/images/triangle.svg" alt="" />
-//             </div>
-//             <div className="timeline-outter-body">
-//                 <div className="timeline-title">
-//                     {props.title}
-//                 </div>
-//                 <div className="timeline-inner-body">
-//                     <div className="timeline-body">
-//                         <p>
-//                             {props.body}
-//                         </p>
-//                         <hr />
-//                         <ul>
-//                             {props.langs.map(lang => (
-//                                 <li>{lang}</li>
-//                             ))}
-//                         </ul>
-//                     </div>
-//                     <div className="timeline-top-right">
-//                         <i className="fab fa-github-alt"></i>
-//                         <i className="fas fa-external-link-alt"></i>
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     );
-// }
- 
 export default TimelineContainer;

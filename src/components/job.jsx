@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import '../css/header.css';
 
 class Job extends Component {
     constructor(props) {
@@ -8,7 +7,7 @@ class Job extends Component {
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(event) {
-        this.setState({ tab: event.target.value });
+        this.setState({ checked: event });
     }
     onChange(i){
         this.setState({
@@ -16,15 +15,8 @@ class Job extends Component {
         });
      }    
     render() { 
-        // var checked;
-        // if (this.props.tabid === 'tab1') {
-        //     checked = 'checked';
-        // }
         return ( 
             <>
-                {/* {checked === 'checked' ? (<input name="tab" id={this.props.tabid} type="radio" checked={checked}/>) :
-                <input name="tab" id={this.props.tabid} type="radio"/>
-                } */}
                 <input name="tab" id={this.props.tabid} type="radio" checked={this.state.checked === this.props.tabid ? true : false} onChange={this.onChange.bind(this,this.props.tabid)} />
                 <div className="tab-content">
                     <h3>{this.props.jobtitle}</h3>
@@ -41,27 +33,4 @@ class Job extends Component {
     }
 }
   
-// function Job(props) {
-//     var checked;
-//     if (props.tabid === 'tab1') {
-//         checked = 'checked';
-//     }
-//     return ( 
-//         <>
-//             {checked === 'checked' ? (<input name="tab" id={props.tabid} type="radio" checked/>) :
-//             <input name="tab" id={props.tabid} type="radio"/>
-//             }
-//             <div className="tab-content">
-//                 <h3>{props.jobtitle}</h3>
-//                 <p>{props.body}</p>
-//                 <ul>
-//                     {props.langs.map(lang => (
-//                         <li>{lang}</li>
-//                     ))}
-//                 </ul>
-//                 <hr />
-//             </div>
-//         </>
-//     );
-// }
 export default Job;

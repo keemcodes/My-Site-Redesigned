@@ -1,12 +1,10 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TimelineContainer from './timeline-container';
-// import '../css/header.css';
 
-class Projects extends Component {
-    state = {  }
-    render() {
-        return ( 
-            <>
+function Projects({forwardRef, inView}) {
+    return ( 
+        <>
+            <section id='projects' className={`fade-in-section ${inView ? 'is-visible' : ''}`} ref={forwardRef}>
                 <div className="heading-title">
                     <h1>Projects</h1>
                 </div>
@@ -78,7 +76,7 @@ class Projects extends Component {
                         />
                         <TimelineContainer 
                             date='Oct. 2013'
-                            title='Police Taser Game Feature (SA:MP)'
+                            title='Police Taser (SA:MP)'
                             body={<p>Custom full featured and interactive police taser. This feature was a redesign of previous command based taser feature. Redesign also includes embedding of roleplay rules as system features.</p>}
                             langs={['Pawn']}
                             github='https://github.com/keemcodes/Anti-Rush-Taze'
@@ -86,7 +84,7 @@ class Projects extends Component {
                         />
                         <TimelineContainer 
                             date='Oct. 2012'
-                            title='Player Property System API (SA:MP Development)'
+                            title='Player Property API (SA:MP)'
                             body={<p>Creating a custom personalized property system for managing the ownership of homes, businesses, vehicles and misc. objects. Utilizing the in-game purchase business model, this system created the initial revenue for the game server.</p>}
                             langs={['Pawn']}
                             github='https://github.com/keemcodes/Evolution-Roleplay'
@@ -95,43 +93,9 @@ class Projects extends Component {
 
                     </div>
                 </div>
-            </>  
-        );
-    }
+            </section>
+        </>  
+    );
 }
- 
-// function Projects() {
-//     return ( 
-//         <section>
-//             <div className="heading-title">
-//                 <h1>Projects</h1>
-//             </div>
-//             <div className="outter-timeline">
-//                 <div className="timeline">
-//                     <TimelineContainer 
-//                         date='Feb. 2021'
-//                         title='Press Release API'
-//                         body={<p>Press Release data provided via API is ingested and parsed into a <b>readable HTML format</b>.</p>}
-//                         // langs={["s","s"]}
-//                         langs={['PHP', 'JS']}
-//                     />
-//                     <TimelineContainer 
-//                         date='Feb. 2022'
-//                         title='Press Release API'
-//                         body={<p>Press Release data provided via API is ingested and parsed into a <b>readable HTML format</b>.</p>}
-//                         // langs={["s","s"]}
-//                         langs={['PHP', 'JS']}
-//                     />
-//                     <TimelineContainer 
-//                         date='Feb. 2023'
-//                         title='Press Release API'
-//                         body={<p>Press Release data provided via API is ingested and parsed into a <b>readable HTML format</b>.</p>}
-//                         // langs={["s","s"]}
-//                         langs={['PHP', 'JS']}
-//                     />
-//                 </div>
-//             </div>
-//         </section>  
-//     );
-// }
+
 export default Projects;
