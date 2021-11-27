@@ -324,6 +324,12 @@ a, button{
   border-radius: 0 10px 10px 0;
 }
 
+.tab-content h3 {
+  color: var(--my-blue);
+}
+.tab-content b {
+  color: var(--my-rwhite);
+}
 
 .tab-content:after {
   content: "";

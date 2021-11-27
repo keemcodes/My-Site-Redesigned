@@ -19,7 +19,8 @@ class Job extends Component {
             <>
                 <input name="tab" id={this.props.tabid} type="radio" checked={this.state.checked === this.props.tabid ? true : false} onChange={this.onChange.bind(this,this.props.tabid)} />
                 <div className="tab-content">
-                    <h3>{this.props.jobtitle}</h3>
+                    <h3><b>{this.props.jobtitle}</b></h3>
+                    <h3>@ {this.props.jobname}</h3>
                     <p>{this.props.body}</p>
                     <ul>
                         {this.props.langs.map((lang, index) => (
