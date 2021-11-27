@@ -66,7 +66,7 @@ function App() {
         <InView threshold={0.25}>
           {({ ref, inView, entry }) => (
             <section id='employment' className={`fade-in-section ${inView ? 'is-visible' : ''}`} ref={ref}>
-              <Employment inView={inView} jobnames={['CoA', 'Nu Life', 'NGG']}/>
+              <Employment inView={inView} jobnames={['City of Atlanta', 'Nu Life Technologies', 'Next Generation Gaming', 'Team-DRD' ]}/>
             </section>
           )}
         </InView>

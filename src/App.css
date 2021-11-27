@@ -355,7 +355,8 @@ a, button{
   top: 0px;
   background-color: var(--my-ldark);
   border-radius: 5px;
-  padding: 3px 10px;
+  /* padding: 3px 10px; */  
+  padding: 15px;
   /* margin-left: 100px; */
 }
 
@@ -410,7 +411,7 @@ a, button{
 .timeline-top-right {
   display: flex;
   justify-content: space-around;
-  z-index: -1;
+  /* z-index: -1; */
   position: absolute;
   top: -25px;
   right: 0;
@@ -449,7 +450,7 @@ a, button{
   height: 18px;
 }
 
-.timeline-top-right i:nth-of-type(2) {
+.timeline-top-right i:nth-of-type(2), .timeline-top-right a:nth-of-type(2) i {
   /* padding-top: 10px; */
   font-size: 17px;
 }
@@ -881,6 +882,9 @@ hr {
 }
 .disable-background {
   background: none;
+}
+.disable-move {
+  position: fixed;
 }
 
 .fade-in-section {

@@ -4,12 +4,17 @@ import React, { Component } from 'react';
 class Job extends Component {
     constructor(props) {
         super(props)
-        this.state = {  tab: 'none' };
+        this.state = {  checked: 'tab1' };
         this.handleChange = this.handleChange.bind(this);
     }
     handleChange(event) {
-        this.setState({ value: event.target.value });
+        this.setState({ tab: event.target.value });
     }
+    onChange(i){
+        this.setState({
+            checked: i
+        });
+     }    
     render() { 
         // var checked;
         // if (this.props.tabid === 'tab1') {
@@ -20,7 +25,7 @@ class Job extends Component {
                 {/* {checked === 'checked' ? (<input name="tab" id={this.props.tabid} type="radio" checked={checked}/>) :
                 <input name="tab" id={this.props.tabid} type="radio"/>
                 } */}
-                <input name="tab" id={this.props.tabid} type="radio" checked={this.props.tabid} onChange={this.handleChange}/>
+                <input name="tab" id={this.props.tabid} type="radio" checked={this.state.checked === this.props.tabid ? true : false} onChange={this.onChange.bind(this,this.props.tabid)} />
                 <div className="tab-content">
                     <h3>{this.props.jobtitle}</h3>
                     <p>{this.props.body}</p>

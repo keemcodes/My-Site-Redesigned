@@ -45,10 +45,10 @@ function Header() {
             
             
                 <div className="nav-align">
-                    <div className="logo">
+                    <div className="logo" style={{position: menu ? 'fixed' : 'absolute'}}>
                         <img src="/images/logo.svg" alt="" />
                     </div>
-                    <div className="hamburger-menu">
+                    <div className='hamburger-menu' style={{position: menu ? 'fixed' : 'absolute'}}>
                         {/* <img src="/images/menu.svg" alt="" /> */}
                         <div className="ham-menu" onClick={() => setMenu(!menu)}>
                             <span id="1"></span>
@@ -60,11 +60,11 @@ function Header() {
                 </div>
                 <nav>
                     <ul>
-                        <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} duration={500}>Home</Link></li>
-                        <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} duration={500}>About</Link></li>
-                        <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} duration={500}>Projects</Link></li>
-                        <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500}>Employment</Link></li>
-                        <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500}>Contact</Link></li>
+                        <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} duration={500} offset={-200}>Home</Link></li>
+                        <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} duration={500} offset={-200}>About</Link></li>
+                        <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} duration={500} offset={-200}>Projects</Link></li>
+                        <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500} offset={-200}>Employment</Link></li>
+                        <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500} offset={-200}>Contact</Link></li>
                     </ul>
                     <a href="resume.pdf"><button>Resume</button></a>
                 </nav>    
@@ -72,11 +72,11 @@ function Header() {
             <div className={`active-menu nav ${menu ? "menu-active" : ""}`} >
                 {/* <h1>NuLife Marketing</h1> */}
                 <ul>
-                    <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} duration={500}>Home</Link></li>
-                    <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} duration={500}>About</Link></li>
-                    <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} duration={500}>Projects</Link></li>
-                    <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500}>Employment</Link></li>
-                    <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500}>Contact</Link></li>
+                    <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} duration={500} offset={-200}>Home</Link></li>
+                    <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} duration={500} offset={-200}>About</Link></li>
+                    <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} duration={500} offset={-200}>Projects</Link></li>
+                    <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500} offset={-200}>Employment</Link></li>
+                    <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500} offset={-200}>Contact</Link></li>
                 </ul>
                 <a href="resume.pdf"><button>Resume</button></a>
             </div>                        

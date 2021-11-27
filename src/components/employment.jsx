@@ -22,19 +22,28 @@ class Employment extends Component {
                         tabid='tab1'
                         jobtitle='City of Atlanta'
                         body='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        langs={['PHP', 'JS']}
+                        langs={['C# / ASP.NET', 'PHP', 'JS']}
                     />
                     <Job 
                         tabid='tab2'
                         jobtitle='Nu Life Marketing'
                         body='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        langs={['PHP', 'JS']}
+                        langs={['PHP', 'JS', 'React']}
+
                     />
                     <Job 
                         tabid='tab3'
                         jobtitle='Next Generation'
                         body='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
-                        langs={['PHP', 'JS']}
+                        langs={['Pawn', 'PHP', 'C#']}
+
+                    />
+                    <Job 
+                        tabid='tab4'
+                        jobtitle='Team-DRD'
+                        body='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'
+                        langs={['Pawn', 'PHP', 'C#']}
+
                     />
                 </div>
             </>

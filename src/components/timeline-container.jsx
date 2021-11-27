@@ -29,8 +29,10 @@ class TimelineContainer extends Component {
                             </ul>
                         </div>
                         <div className="timeline-top-right">
-                            <i className="fab fa-github-alt"></i>
-                            <i className="fas fa-external-link-alt"></i>
+                            {/* <i className="fab fa-github-alt"></i>
+                            <i className="fas fa-external-link-alt"></i> */}
+                            <a href={this.props.github} ><i className="fab fa-github-alt"></i></a>
+                            <a href={this.props.external} ><i className="fas fa-external-link-alt"></i></a>
                         </div>
                     </div>
                 </div>
