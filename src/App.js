@@ -14,27 +14,27 @@ function App() {
     <>
       <Header />
       <main>
-        <InView threshold={0.25}>
+        <InView threshold={0.15}>
           {({ ref, inView, entry }) => (
               <Home forwardRef={ref} inView={inView} />
           )}
         </InView>
-        <InView threshold={0.25}>
+        <InView threshold={0.15}>
           {({ ref, inView, entry }) => (
               <About forwardRef={ref} inView={inView}/>
           )}
         </InView>
-        <InView threshold={0.25}>
+        <InView threshold={0.15}>
           {({ ref, inView, entry }) => (
               <Projects forwardRef={ref} inView={inView} />
           )}
         </InView>
-        <InView threshold={0.25}>
+        <InView threshold={0.15}>
           {({ ref, inView, entry }) => (
               <Employment forwardRef={ref} inView={inView} jobnames={['City of Atlanta', 'Nu Life Technologies', 'Next Generation Gaming', 'Team-DRD' ]}/>
           )}
         </InView>
-        <InView threshold={0.25}>
+        <InView threshold={0.15}>
           {({ ref, inView, entry }) => (
               <Contact forwardRef={ref} inView={inView} />
           )}

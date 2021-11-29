@@ -101,6 +101,7 @@ nav button {
 
 a, button{
   cursor: pointer;
+  text-decoration: none;
 }
 
 
@@ -230,7 +231,7 @@ a, button{
   top: -25px;
   right: 0;
   width: 65px;
-  height: 62px;
+  height: 40px;  
   background-color: var(--my-ldark);
   border-radius: 5px;
   padding: 5px 3px;
