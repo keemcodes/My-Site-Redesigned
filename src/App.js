@@ -5,6 +5,7 @@ import About from './components/about';
 import Projects from './components/projects';
 import Employment from './components/employment';
 import Contact from './components/contact';
+import Footer from './components/footer';
 import { InView } from 'react-intersection-observer';
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
           )}
         </InView>
       </main>
+      <Footer />
     </>
   );
 }

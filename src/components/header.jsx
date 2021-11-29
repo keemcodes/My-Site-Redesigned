@@ -21,14 +21,13 @@ function Header() {
         if (menu === true) {
             document.body.style.overflowY = 'hidden'
             setVisible( false )
-            return () => window.removeEventListener('scroll', handleScroll);
         }
         else {
             document.body.style.overflowY = 'scroll'
             window.addEventListener('scroll', handleScroll);
-            return () => window.removeEventListener('scroll', handleScroll);
             
         }
+        return () => window.removeEventListener('scroll', handleScroll);
         
     
     
@@ -38,7 +37,7 @@ function Header() {
 
     const navbarStyles = {
         position: 'fixed',
-        transition: 'top 0.6s'
+        transition: 'top 0.3s'
     }        
 
 

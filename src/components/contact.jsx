@@ -15,8 +15,9 @@ function Contact({forwardRef, inView}) {
                     </p>
                 </div>
                 <div className="contact-buttons">
-                    <button>LEAVE MESSAGE</button>
-                    <button>EMAIL ME</button>
+                    {/* <button>LEAVE MESSAGE</button> */}
+                    <a href="mailto:akeeminbox@gmail.com"><button>EMAIL ME</button></a>
+                    
                 </div>
             </section>  
         </>
