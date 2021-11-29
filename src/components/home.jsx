@@ -10,7 +10,8 @@ function Home({forwardRef, inView}) {
             </div>
             <div className="page-intro">My name is Keem</div>
             <div className="page-description">I design and build apps</div>
-            <div className="page-button"><button>REACH ME</button></div>
+            
+            <div className="page-button"><a href="mailto:akeeminbox@gmail.com"><button>REACH ME</button></a></div>
         </section>
     );
 }
