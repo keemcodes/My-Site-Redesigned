@@ -777,6 +777,14 @@ hr {
 }
 /* .footer {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 26vh;
+  padding-bottom: 25px;
+} */
+/* .footer {
+  display: flex;
   justify-content: center;
   align-items: center;
   height: 10vh;

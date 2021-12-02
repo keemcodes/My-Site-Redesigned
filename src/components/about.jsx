@@ -25,8 +25,7 @@ function About({forwardRef, inView}) {
                                 <br /><br />
                                 Everything I know is <b>self taught</b>. My initial interest in application development and systems sparked from a gaming hobby during in my early teens. Over the years I've worked on dozens of game, web, and mobile applications. 
                                 <br /><br />
-                                I'm currently employed at 
-                                <b>Hartsfield Jackson International Airport</b> as a Software Engineer for cloud based systems.
+                                I'm currently employed at <b>Hartsfield Jackson International Airport</b> as a Software Engineer for cloud based systems.
                                 <br /><br />
                                 Here are a few languages and framework I'm proficient and/or familiar with...
                             </p>
