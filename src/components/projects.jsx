@@ -20,7 +20,7 @@ function Projects({forwardRef, inView}) {
                         />
                         <TimelineContainer 
                             date='July 2021'
-                            title='Employee Initiatives Application'
+                            title='Employee Initiatives App'
                             body={<p>Built a high utilization application supporting over <b>50,000 internal enterprise users</b> in submitting weekly initaitives and requesting co-worker support. Application integrates Microsoft Active Directory to offer SSO to our internal users.</p>}
                             langs={['PHP', 'JS']}
                             github="https://github.com/keemcodes/Employee-Initiatives-App-Official-Changelog"
@@ -36,7 +36,7 @@ function Projects({forwardRef, inView}) {
                         />                        
                         <TimelineContainer 
                             date='Mar. 2020'
-                            title='Security Wait Times Application'
+                            title='Security Wait Times App'
                             body={<p>Integrates proprietary API to consume <b>motion sensor data</b> for customer wait time calculation. Application features include web page integration for public view, web admin panel for manual input and closing / opening of different checkpoints, and email notifications of API status.</p>}
                             langs={['PHP', 'JS']}
                             github='https://github.com/keemcodes/Security-Wait-Times-Public-Readme'
