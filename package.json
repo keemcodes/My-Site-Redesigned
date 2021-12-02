@@ -11,6 +11,7 @@
     "react-intersection-observer": "^8.32.3",
     "react-scripts": "4.0.3",
     "react-scroll": "^1.8.4",
+    "react-tabs": "^3.2.3",
     "web-vitals": "^1.1.2"
   },
   "scripts": {

@@ -62,11 +62,11 @@ function Header() {
                 </div>
                 <nav>
                     <ul>
-                        <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} duration={500} offset={-100}>Home</Link></li>
-                        <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} duration={500} offset={-100}>About</Link></li>
-                        <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} duration={500} offset={-100}>Projects</Link></li>
-                        <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500} offset={-100}>Employment</Link></li>
-                        <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500} offset={-100}>Contact</Link></li>
+                        <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>Home</Link></li>
+                        <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>About</Link></li>
+                        <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>Projects</Link></li>
+                        <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>Employment</Link></li>
+                        <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>Contact</Link></li>
                     </ul>
                     <a href="resume.pdf"><button>Resume</button></a>
                 </nav>    
@@ -74,11 +74,11 @@ function Header() {
             <div className={`active-menu nav ${menu ? "menu-active" : ""}`} >
                 {/* <h1>NuLife Marketing</h1> */}
                 <ul>
-                    <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} duration={500} offset={-100}>Home</Link></li>
-                    <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} duration={500} offset={-100}>About</Link></li>
-                    <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} duration={500} offset={-100}>Projects</Link></li>
-                    <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} duration={500} offset={-100}>Employment</Link></li>
-                    <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} duration={500} offset={-100}>Contact</Link></li>
+                    <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>Home</Link></li>
+                    <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>About</Link></li>
+                    <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>Projects</Link></li>
+                    <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>Employment</Link></li>
+                    <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} hashSpy={true} duration={500} offset={-100}>Contact</Link></li>
                 </ul>
                 <a href="resume.pdf"><button>Resume</button></a>
             </div>                        
