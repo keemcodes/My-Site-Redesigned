@@ -23,6 +23,10 @@ function TimelineContainer(props) {
                                 <li key={index}>{lang} </li>
                             ))}
                         </ul>
+                        {/* <div style={{height:'100%',width: '100%', position: 'relative'}} className="timeline-body-image">
+
+                            <img style={{height:'100%',width: '100%', left: '0', top: '0', position: 'absolute'}} src="/images/portfolio-site-image.png" alt="" />
+                        </div> */}
                     </div>
                     <div className="timeline-top-right">
                         <a href={props.github} ><i className="fab fa-github-alt"></i></a>

@@ -282,6 +282,30 @@ a, button{
   margin: 0 auto;
 }
 
+/* Mobile */
+/* .tabs-container label {
+  border-bottom: unset;
+
+}
+
+.tabs-container {
+  display: flex;
+  border-radius: 10px 10px 0 0px;
+  flex-wrap: wrap;
+  width: unset;
+  justify-content: center;
+  align-content: stretch;
+}
+
+.tab-content {
+  border-radius: 0 0px 10px 0;
+  width: unset;
+}
+
+.experience-body {
+  display: flex;
+  flex-direction: column;
+} */
 
 
 /* First */
@@ -312,7 +336,15 @@ a, button{
   height: unset;
   background-color: unset;
 }
-
+.tab-content {
+  position: relative;
+  background: var(--my-ldark);
+  padding: 15px;
+  box-sizing: border-box;
+  display: none;
+  border-radius: 0 0px 10px 0;
+}
+/* Last */
 
 
 
@@ -366,7 +398,10 @@ a, button{
 input[name="tab"] {
  display: none;
 }
+input[name="tab"]:checked + .tab-content{
+   display: block;
 
+}
 
 
 @keyframes slide{
@@ -525,7 +560,6 @@ li {
 .timeline-body li, .tab-content li {
   font-size: 12px;
   display: inline;
-  margin-right: 10px;
 }
 
 .tab-content ul {
@@ -683,54 +717,7 @@ hr {
   visibility: visible;
 }
 
-.react-tabs {
-  -webkit-tap-highlight-color: transparent;
-}
 
-.react-tabs__tab-list {
-  display: flex;
-  position: relative;
-  background: var(--my-dgrey);
-  z-index: 20;
-  border-radius: 10px 10px 0 0px;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: stretch;
-}
-
-.react-tabs__tab {
-  position: relative;
-  padding: 10px;
-  color: #fff;
-  cursor: pointer;
-  user-select: none;
-  font-family: "Russo One",sans-serif;
-  font-size: 10px;
-  text-align: center;
-  width: unset;
-  height: unset;
-  background-color: unset;
-}
-
-.react-tabs__tab--selected {
-  background: var(--my-ldark);
-  border-color: #aaa;
-  color: var(--my-rwhite);
-  border-radius: 5px 5px 0 0;
-}
-
-.react-tabs__tab-panel {
-  position: relative;
-  background: var(--my-ldark);
-  padding: 15px;
-  box-sizing: border-box;
-  display: none;
-  border-radius: 0 0px 10px 0;
-}
-
-.react-tabs__tab-panel--selected {
-  display: block;
-}
 ::-webkit-scrollbar {
   width: 10px;
   background: var(--my-dark);
@@ -796,24 +783,23 @@ hr {
   .timeline-body {
     margin-left: 100px;
   }
-	.experience-body {
+  .experience-body {
     flex-direction: row;
     max-width: 500px;
     margin: 0 auto;
   }
-  .react-tabs__tab-list {
+  .tabs-container {
     position: relative;
     width: 90px;
     border-radius: 10px 0 0 10px;
   }
   
-  .react-tabs__tab {
+  .tabs-container label, .tabs-container button {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: block;
+   
   }
-  
-  
-  .react-tabs__tab-panel {
+  .tab-content {
     width: calc(100% - 90px);
     border-radius: 0 10px 10px 0;
   }
@@ -838,7 +824,26 @@ hr {
     margin-right: -50%;
     width: 50%;
   }
-
+	.experience-body {
+    flex-direction: row;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .tabs-container {
+    position: relative;
+    width: 90px;
+    border-radius: 10px 0 0 10px;
+  }
+  
+  .tabs-container label, .tabs-container button{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    display: block;
+   
+  }
+  .tab-content {
+    width: calc(100% - 90px);
+    border-radius: 0 10px 10px 0;
+  }
 }
 
 @media (min-width: 982px) {

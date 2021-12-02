@@ -3,21 +3,12 @@ import React, { Component } from 'react';
 class Job extends Component {
     constructor(props) {
         super(props)
-        this.state = {  checked: 'tab1' };
-        this.handleChange = this.handleChange.bind(this);
+        this.state = {  };
     }
-    handleChange(event) {
-        this.setState({ checked: event });
-    }
-    onChange(i){
-        this.setState({
-            checked: i
-        });
-     }    
+
     render() { 
         return ( 
             <>
-                <input name="tab" id={this.props.tabid} type="radio" checked={this.state.checked === this.props.tabid ? true : false} onChange={this.onChange.bind(this,this.props.tabid)} />
                 <div className="tab-content">
                     <h3><b>{this.props.jobtitle}</b></h3>
                     <h3>@ {this.props.jobname}</h3>
