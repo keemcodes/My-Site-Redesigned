@@ -830,8 +830,8 @@ hr {
   transform: scale(1.1);
 }
 .top-contact-bar {
+  display: none;
   margin-left: 10px;
-  display: block;
   width: 4px;
   height: 100px;
   background: var(--my-blue);
@@ -845,6 +845,7 @@ hr {
   background: var(--my-blue);
   border-radius: 25px;
 }
+
 
 @media (min-width: 411px) {
   .timeline::before {
