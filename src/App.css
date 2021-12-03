@@ -363,6 +363,10 @@ a, button{
   margin: 0px 10px;
   font-size: 12px;
 }
+
+.contact-container {
+  margin-top: 25vh;
+}
 input[name="tab"] {
  display: none;
 }
@@ -494,7 +498,7 @@ h3 {
 p {
   font-family: 'Work Sans', sans-serif;
   font-size: 13px;
-  line-height: 18px;
+  line-height: 24px;;
   color: var(--my-grey);
 }
 
@@ -773,7 +777,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  height: 26vh;
+  height: 35vh;
   padding-bottom: 25px;
 }
 /* .footer {
