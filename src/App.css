@@ -1,5 +1,6 @@
 :root {
   --bg-color: radial-gradient( #1B3F91, #292D36);
+  --abg-color: radial-gradient( #1B3F91, var(--my-ldark));
   --nav-bg-color: radial-gradient( rgb(27, 63, 145, 80%), rgb(41, 45, 54, 80%));
   --my-white: #DEDEDE;
   --my-rwhite: #ffffff;
@@ -55,6 +56,11 @@ header .logo {
   position: absolute;
   top: 5px;
   left: 0;
+  transition: transform 100ms ease-in;
+}
+
+header .logo:hover {
+  transform:scale(1.1);
 }
 
 header .hamburger-menu {
@@ -100,8 +106,14 @@ nav button {
 }
 
 a, button{
+  color: unset;
   cursor: pointer;
   text-decoration: none;
+  transition: transform 100ms ease-in;
+}
+
+a:hover {
+  transform:scale(1.1);
 }
 
 
@@ -121,7 +133,11 @@ a, button{
 .my-photo {
   float: right;
   position: relative;
+  transition: transform 100ms ease-in;
 
+}
+.my-photo:hover {
+  transform: scale(1.1);
 }
 
 .my-photo img {
@@ -219,6 +235,12 @@ a, button{
   background-color: var(--my-ldark);
   border-radius: 5px;
   padding: 15px;
+  /* transition: background 100ms ease; */
+}
+
+.timeline-body:hover {
+  background: var(--abg-color);
+
 }
 
 
@@ -419,6 +441,11 @@ button {
   height: 34px;
   border-radius: 5px;
   font-size: 14px;
+  transition: transform 100ms ease-in;
+  
+}
+button:hover {
+  transform: scaleX(1.1);
   
 }
 
@@ -516,6 +543,10 @@ li {
   margin-bottom: 3px;
   color: var(--my-rwhite);
   font-family: 'Bebas Neue', sans-serif;
+  transition: transform 100ms ease-in;
+}
+li:hover {
+  transform: scale(1.1);
 }
 .section-languages li::before {
   content: "";
@@ -585,14 +616,12 @@ hr {
 .ham-menu:hover {
 	cursor: pointer;
 	transform: scale(1.1);
-	filter: brightness(1.2);
 	
 	
 }
 
 .ham-menu:active {
 	transform: scale(1.1);
-	filter: brightness(1.2);
 	
 }
 
@@ -780,20 +809,43 @@ hr {
   height: 35vh;
   padding-bottom: 25px;
 }
-/* .footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  height: 26vh;
-  padding-bottom: 25px;
-} */
-/* .footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-} */
+
+.side-contacts {
+  z-index: 20;
+  display: none;
+  color:var(--my-blue);
+  font-size: 25px;
+  position: fixed;
+  left: 62px;
+  bottom: -20px;
+  width: 4px;
+}
+.side-contacts div {
+  margin-bottom: 10px;
+}
+.side-contacts i {
+  transition: transform 100ms ease-in;
+}
+.side-contacts i:hover {
+  transform: scale(1.1);
+}
+.top-contact-bar {
+  margin-left: 10px;
+  display: block;
+  width: 4px;
+  height: 100px;
+  background: var(--my-blue);
+  border-radius: 25px;
+}
+.bottom-contact-bar {
+  margin-left: 10px;
+  display: block;
+  width: 4px;
+  height: 100px;
+  background: var(--my-blue);
+  border-radius: 25px;
+}
+
 @media (min-width: 411px) {
   .timeline::before {
     content: "";
@@ -868,6 +920,9 @@ hr {
     margin-right: -50%;
     width: 50%;
   }
+  .side-contacts {
+    display: block;
+  }  
 
 }
 

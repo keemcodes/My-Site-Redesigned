@@ -48,7 +48,8 @@ function Header() {
             
                 <div className="nav-align">
                     <div className="logo" style={{position: menu ? 'fixed' : 'absolute'}}>
-                        <img src="/images/logo.svg" alt="" />
+                        <a href="#home"><img src="/images/logo.svg" alt="" /></a>
+                        
                     </div>
                     <div className='hamburger-menu' style={{position: menu ? 'fixed' : 'absolute'}}>
                         {/* <img src="/images/menu.svg" alt="" /> */}
