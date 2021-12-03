@@ -108,7 +108,7 @@ a, button{
 .page-title {
   font-family: 'Russo One', sans-serif;
   color: var(--my-rwhite);
-  font-size: clamp(46px, 8vw, 80px);
+  font-size: clamp(5px,13vw,57px);
 }
 
 .page-photo-icon img {
@@ -390,12 +390,13 @@ input[name="tab"] {
 
 .page-intro {
   color: var(--my-blue);
-  font-size: clamp(31px, 8vw, 52px);
+  font-size: clamp(5px,10vw,52px);
 }
 
 .page-description {
   color: var(--my-grey);
-  font-size: clamp(31px, 8vw, 52px);
+  font-size: clamp(5px,10vw,52px);
+  
 
 }
 
