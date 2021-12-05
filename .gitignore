@@ -3,10 +3,12 @@
 
 
 # dependencies
-/client/build
-/client/mode_modules
 /node_modules
 /public
+/client/build
+/client/node_modules
+/client/public/fontawesome
+
 /old-files
 
 

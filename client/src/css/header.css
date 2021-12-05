@@ -1,0 +1,31 @@
+:root {
+    --bg-color: radial-gradient( #1B3F91, #292D36);
+    --nav-bg-color: radial-gradient( rgb(27, 63, 145, 80%), rgb(41, 45, 54, 80%));
+    /* --nav-bg-color: radial-gradient( #1B3F91, #292D36 80%, transparent 70%); */
+    --my-white: #DEDEDE;
+    --my-rwhite: #ffffff;
+    --my-blue: #0080FF;
+    /* --my-grey: #979DAC; */
+    --my-grey: #DEDEDE;
+    --my-dgrey: #4E566A;
+    --my-dark: #292D36;
+    --my-ldark: #3C414D;
+}
+header {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+    width: 100%;
+    background: var(--nav-bg-color);
+    opacity: 100%;
+}
+
+header .logo {
+    margin-left: 10px;
+}
+
+header .hamburger-menu {
+    margin-right: 10px;
+}
