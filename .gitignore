@@ -3,9 +3,11 @@
 
 
 # dependencies
-/client
+/client/build
+/client/mode_modules
 /node_modules
 /public
+/old-files
 
 
 npm-debug.log*

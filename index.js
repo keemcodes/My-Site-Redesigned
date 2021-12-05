@@ -47,13 +47,17 @@ dbObject.findProjects().then(result => {
 
 
 
-// app.get('/projectsView', (req, res) => {
+app.get('/projectsView', (req, res) => {
 
-//   res.render('projects', { data: projects });
+  res.render('projects', { data: projects });
 
-// })
+})
 
   
+
+app.get('/json', (req, res) => {
+  res.json(users)
+})
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
@@ -93,7 +97,19 @@ app.post('/formPost2',
 
   });
 });
-
+app.post('/formPost', (req, res) => {
+  const name = req.body.name2;
+  const email = req.body.email2;
+  const message = req.body.message2;
+  console.log(req.body)
+  // console.log(user_id, token, geo)
+  res.send({
+    'name': name,
+    'email': email,
+    'message': message
+  });
+  dbObject.createContact(name, email, message);
+});
 
 
 app.listen(port, () => {
