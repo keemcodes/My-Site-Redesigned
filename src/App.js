@@ -7,6 +7,9 @@ import Employment from './components/employment';
 import Contact from './components/contact';
 import Footer from './components/footer';
 import AbsoluteSides from './components/absolute-sides';
+// import Test from './components/test';
+// import TestTwo from './components/test2';
+// import TestThree from './components/test3';
 import { InView } from 'react-intersection-observer';
 
 function App() {

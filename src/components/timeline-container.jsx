@@ -5,7 +5,6 @@ function TimelineContainer(props) {
         <div className="timeline-container">
             <div className="timeline-date">
                 {props.date}
-                {/* {date} */}
             </div>
             <div className="timeline-arrow">
                 <img src="/images/triangle.svg" alt="" />
@@ -16,7 +15,7 @@ function TimelineContainer(props) {
                 </div>
                 <div className="timeline-inner-body">
                     <div className="timeline-body">
-                        {props.body}
+                        <p>{props.body}</p>
                         <hr />
                         <ul>
                             {props.langs.map((lang, index) => (

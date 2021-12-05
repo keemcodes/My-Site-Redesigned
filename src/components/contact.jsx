@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactForm from './contact-form'
 
 function Contact({forwardRef, inView}) {
     return ( 
@@ -16,12 +17,9 @@ function Contact({forwardRef, inView}) {
                             Feel free to leave a message or email me any inquires. Or if you want to just say hey that's cool too! 
                         </p>
                     </div>
-                    <div className="contact-buttons">
-                        {/* <button>LEAVE MESSAGE</button> */}
-                        <a href="mailto:akeeminbox@gmail.com"><button>EMAIL ME</button></a>
-                        
-                    </div>
+                    <ContactForm />
                 </div>
+
             </section>  
         </>
     );
