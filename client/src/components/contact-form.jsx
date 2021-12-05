@@ -15,7 +15,7 @@ function ContactForm() {
     });
     function submit(e) {
         e.preventDefault();
-        fetch("/formPost2", {
+        fetch("/formPost", {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(data)
@@ -45,7 +45,10 @@ function ContactForm() {
     return (
         <>
             <div className="contact-form">
-                <div className="contact-form-header"><h2>Send A Message</h2></div>
+                <div className="contact-form-header">
+                    <i className="fas fa-signature"></i>
+                    <h2>Send A Message</h2>
+                </div>
                 <form onSubmit={(e) => submit(e)}>
                     <div className="contact-form-bar-outter">
                         <div className="contact-form-bar-line"></div>

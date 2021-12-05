@@ -5,7 +5,6 @@ const port = 3001
 // Database
 const { db } = require('./db');
 const dbObject = new db();
-const validator = require('validator');
 const { body, validationResult } = require('express-validator');
 
 app.set('view engine', 'ejs');
@@ -75,7 +74,7 @@ app.post('/api', (req, res) => {
   });
 });
 
-app.post('/formPost2',
+app.post('/formPost',
   body('name').not().isEmpty().trim().escape(),
   body('email').isEmail().normalizeEmail(),
   body('message').not().isEmpty().trim().escape(),
@@ -84,19 +83,18 @@ app.post('/formPost2',
   const email = req.body.email;
   const message = req.body.message;
   const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }    
+  if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });   
   console.log(name, email, message)
   dbObject.createContact(name, email, message).catch(error => console.log(error));
   res.send({
-    'errors': {
-
+    errors: {
       success: `Thank you ${name}, I've received your message`,
     }
 
   });
 });
+
+
 app.post('/formPost', (req, res) => {
   const name = req.body.name2;
   const email = req.body.email2;
