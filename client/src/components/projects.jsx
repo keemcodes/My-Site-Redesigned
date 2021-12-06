@@ -7,7 +7,7 @@ function Projects({forwardRef, inView}) {
     const [projects, setProjects] = useState([]);
 
     useEffect(() => {
-        fetch("/projects")
+        fetch("/api/projects")
             .then((res) => res.json())
             .then((result) => {
                 setProjects(result)

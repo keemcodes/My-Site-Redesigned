@@ -13,15 +13,24 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
 
+
+// Testing use only
+// app.use(function(req, res, next) {
+//   res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
+//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//   next();
+// });
+
+
 // dbObject.findProjects().then(result => console.log(result))
 
 
-app.get('/users', (req, res) => {
+app.get('/api/users', (req, res) => {
   
     console.log(users);
     res.render('users', { data: users });
 })
-app.get('/form', (req, res) => {
+app.get('/api/form', (req, res) => {
   
     res.render('form');
 })
@@ -36,7 +45,7 @@ app.get('/form', (req, res) => {
 
 // On load...
 dbObject.findProjects().then(result => {
-  app.get('/projects', (req, res) => {
+  app.get('/api/projects', (req, res) => {
 
     res.status(200).json(result)
     
@@ -74,7 +83,7 @@ app.post('/api', (req, res) => {
   });
 });
 
-app.post('/formPost',
+app.post('/api/formPost',
   body('name').not().isEmpty().trim().escape(),
   body('email').isEmail().normalizeEmail(),
   body('message').not().isEmpty().trim().escape(),
@@ -86,12 +95,7 @@ app.post('/formPost',
   if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });   
   console.log(name, email, message)
   dbObject.createContact(name, email, message).catch(error => console.log(error));
-  res.send({
-    errors: {
-      success: `Thank you ${name}, I've received your message`,
-    }
-
-  });
+  res.send({ errors: { success: `Thank you ${name}, I've received your message`, } });
 });
 
 

@@ -1,5 +1,5 @@
 :root {
-  --bg-color: radial-gradient( #1B3F91, #292D36);
+  --bg-color: radial-gradient( #1B3F91 40%, #292D36);
   --abg-color: radial-gradient( #1B3F91, var(--my-ldark));
   --nav-bg-color: radial-gradient( rgb(27, 63, 145, 80%), rgb(41, 45, 54, 80%));
   --my-white: #DEDEDE;
@@ -1072,7 +1072,7 @@ textarea {
 
 .contact-form-header {
   display: flex;
-  background: var(--my-rgrey);
+  background: var(--my-dgrey);
   height: 60px;
   border-radius: 20px 20px 0px 0px;
   justify-content: center;
