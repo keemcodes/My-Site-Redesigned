@@ -17,13 +17,26 @@ Originally this was suppose to be a small HTML/JS project, then I started playin
 I more fancy being a backend engineer, but this was an attempt at designing a UI from scratch and coding it. I originally built the concept design in Adobe XD, later implemented the design in HTML/CSS. I was contemplating between native JS or React, I have a ton of experience with native but decided to use this project to take a plunge into React outside of messing with demo snippets in Codepen. With a few Express API snippets I wrote prior, I conjured up my own full stack portfolio application.
 
 ## Technology Used
-* Javascript **(Frontend)**
-* React **(Frontend Framework)**
+
+Application Stack
+* Javascript **(Frontend/Backend)**
+* React **(Frontend Library)**
 * Node JS **(Backend)**
 * Express **(Backend Framework)**
 * MySQL + Sequelize **(Database + ORM)**
 
+System Stack
+* Linux **(Server OS)**
+* Apache **(Web Server)**
+* PM2 **(Node Process Manager)**
+
 ## Features
 * Retrieves and loads projects data supplied via Express API
 * Captures contact form data via HTTP POST to Express API
+
+## Misc Details
+* Application runs on Apache for Linux
+* API service is proxied from port 3000 to port 80 using Apache
+* API process is managed by PM2 for Linux
+
 
