@@ -9,6 +9,9 @@
 /server/node_modules
 /server/public
 /server/old-files
+/server/notes
+/server/tests
+/server/views
 
 
 npm-debug.log*

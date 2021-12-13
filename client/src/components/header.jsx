@@ -69,7 +69,7 @@ function Header() {
                         <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Employment</Link></li>
                         <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Contact</Link></li>
                     </ul>
-                    <a href="resume.pdf"><button>Resume</button></a>
+                    <a href="resume.pdf" target="_blank"><button>Resume</button></a>
                 </nav>    
             </div>
             <div className={`active-menu nav ${menu ? "menu-active" : ""}`} >
@@ -81,7 +81,7 @@ function Header() {
                     <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Employment</Link></li>
                     <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Contact</Link></li>
                 </ul>
-                <a href="resume.pdf"><button>Resume</button></a>
+                <a href="resume.pdf" target="_blank"><button>Resume</button></a>
             </div>                        
         </header>
     );
