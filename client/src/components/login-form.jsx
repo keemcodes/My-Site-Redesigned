@@ -19,8 +19,8 @@ function LoginForm() {
         .then((res) => res.json())
         .then((result) => {
             setResponse(result)
-            console.log(result)
             setIsAuth(true);
+            console.log(result)
             setData({
                 email: "",
                 password: ""

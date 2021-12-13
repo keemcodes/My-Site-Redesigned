@@ -13,7 +13,7 @@ import { AuthContext } from '../Auth';
 
 function AdminRoute() {
   const { isAuth, logout } = useContext(AuthContext);
-
+  console.log("App auth: ", isAuth);
   const [secret, setSecret] = useState("");
 
   const getSecret = async () => {

@@ -11,7 +11,7 @@ const AuthProvider = ({ children }) => {
     }, [])
 
     const checkAuth = async () => {
-        fetch('api/auth/user_data')
+        fetch('/api/auth/user_data')
             .then(response => {
                 if (response.email) {
                     setIsAuth(true)
