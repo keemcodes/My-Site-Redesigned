@@ -1,11 +1,22 @@
 const router = require('express').Router();
 const {dbObject} = require('../config/dbObject');
 const { body, validationResult } = require('express-validator');
+const isAuthenticated = require('../config/isAuthenticated');
+
 
 
   // On load...
   dbObject.findProjects().then(result => {
       router.get('/projects', (req, res) => {
+    
+        res.status(200).json(result)
+        
+      })
+    
+    }).catch(error => console.log(error))
+
+  dbObject.findContacts().then(result => {
+      router.get('/contacts', isAuthenticated, (req, res) => {
     
         res.status(200).json(result)
         

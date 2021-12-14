@@ -12,6 +12,7 @@
 /server/notes
 /server/tests
 /server/views
+/server/.env
 
 
 npm-debug.log*

@@ -39,7 +39,7 @@ router.get('/user_data', (req, res) => {
 });
   
 router.get('/secrets', isAuthenticated, (req, res) => {
-  res.json('Talk is cheap. Show me the code. -Linus Torvalds');
+  res.json('not so much a secret huh');
 });
 
 

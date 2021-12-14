@@ -21,10 +21,6 @@ function LoginForm() {
             setResponse(result)
             setIsAuth(true);
             console.log(result)
-            setData({
-                email: "",
-                password: ""
-            })
         },
         (error) => {
             setResponse("Login failed")
@@ -60,7 +56,7 @@ function LoginForm() {
                     </div>
                     <label htmlFor="email">Password</label>
                     <div className="input-icon-wrap">
-                        <i className="fas fa-envelope"></i>
+                        <i className="fas fa-key"></i>
                         <input onChange={(e) => handle(e)} id='password' name='password' placeholder='' type="text" value={data.password}/>
                     </div>
                     <input type="submit" value="Login" />

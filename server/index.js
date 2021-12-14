@@ -3,7 +3,7 @@ const express = require('express');
 const session = require('express-session');
 const passport = require('passport');
 const app = express()
-const port = 3001
+const port = process.env.PORT || 3001
 
 // Routes
 const routes = require('./routes')
@@ -20,6 +20,16 @@ app.use(express.static('public'))
 app.use(session({ secret: 'notsuuch a secret', resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
+
+
+// Database testing
+// const { dbObject } = require('./config/dbObject')
+// dbObject.dropTables();
+// dbObject.sync()
+// dbObject.forceSync()
+// dbObject.addInitialProjects();
+
+
 
 //  Routing...
 app.use('/api', routes)

@@ -197,9 +197,11 @@ async function findProjects() {
       attributes: ['lang']
     }]
   })
-
-
 }
+async function findContacts() {
+  return await models.Contacts.findAll({})
+}
+
 async function authenticate() {
   try {
       await db.authenticate();
@@ -211,7 +213,14 @@ async function authenticate() {
 } 
 
 async function sync() {
-  await db.sync({})
+  await db.sync()
+  .catch( error => {
+    console.log(error);
+  });
+  console.log("All models were synchronized successfully.");
+}
+async function forceSync() {
+  await db.sync({force: true})
   .catch( error => {
     console.log(error);
   });
@@ -231,4 +240,4 @@ await db.drop();
 console.log("All tables dropped!");
 }
 
-module.exports.dbObject = { findProjects, createContact, sync, dropTables, addInitialProjects, authenticate }
+module.exports.dbObject = { findProjects, findContacts, createContact, sync, dropTables, addInitialProjects, authenticate }

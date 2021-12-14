@@ -14,7 +14,7 @@ const Contacts = db.define('contacts', {
       type: DataTypes.STRING(1000)
     }, 
   }, {
-    timestamps: true
+    timestamps: true,
 });
 
 module.exports = Contacts
