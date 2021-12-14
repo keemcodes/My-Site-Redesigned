@@ -24,6 +24,9 @@ Application Stack
 * Node JS **(Backend)**
 * Express **(Backend Framework)**
 * MySQL + Sequelize **(Database + ORM)**
+* Passport JS + Local Strategy **(User Authentication)**
+* Express Sessions **(Persist Authentication)**
+* Bcrypt **(Password Encryption)**
 
 System Stack
 * Linux **(Server OS)**
@@ -33,6 +36,7 @@ System Stack
 ## Features
 * Retrieves and loads projects data supplied via Express API
 * Captures contact form data via HTTP POST to Express API
+* User authentication and persisted authorized sessions vi
 
 ## Misc Details
 * Application runs on Apache for Linux
