@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 // import { Component } fr
 import { debounce } from '../utilities/helpers';
 import { Link } from "react-scroll";
+import { AuthContext } from '../Auth';
 
-function Header() {
+
+function Header(props) {
     
-    
+    const { logout } = useContext(AuthContext);
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [visible, setVisible] = useState(true);
     const [menu, setMenu] = useState();
@@ -48,7 +50,7 @@ function Header() {
             
                 <div className="nav-align">
                     <div className="logo" style={{position: menu ? 'fixed' : 'absolute'}}>
-                        <a href="#home"><img src="/images/logo.svg" alt="" /></a>
+                        <a href={props.admin || "#home"}><img src="/images/logo.svg" alt="" /></a>
                         
                     </div>
                     <div className='hamburger-menu' style={{position: menu ? 'fixed' : 'absolute'}}>
@@ -62,6 +64,8 @@ function Header() {
                     </div>
                 </div>
                 <nav>
+                    {
+                    !props.admin ?
                     <ul>
                         <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Home</Link></li>
                         <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>About</Link></li>
@@ -69,18 +73,30 @@ function Header() {
                         <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Employment</Link></li>
                         <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Contact</Link></li>
                     </ul>
+                    :
+                    <ul><li><a href='/'>Home</a></li></ul>
+                    }
                     <a href="resume.pdf" target="_blank"><button>Resume</button></a>
                 </nav>    
             </div>
             <div className={`active-menu nav ${menu ? "menu-active" : ""}`} >
                 {/* <h1>NuLife Marketing</h1> */}
-                <ul>
-                    <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Home</Link></li>
-                    <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>About</Link></li>
-                    <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Projects</Link></li>
-                    <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Employment</Link></li>
-                    <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Contact</Link></li>
-                </ul>
+                {
+                    !props.admin ?
+                    <ul>
+                        <li><Link activeClass="active-nav-link" to="home" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Home</Link></li>
+                        <li><Link activeClass="active-nav-link" to="about" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>About</Link></li>
+                        <li><Link activeClass="active-nav-link" to="projects" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Projects</Link></li>
+                        <li><Link activeClass="active-nav-link" to="employment" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Employment</Link></li>
+                        <li><Link activeClass="active-nav-link" to="contact" spy={true} smooth={true} hashSpy={true} duration={350} offset={-100}>Contact</Link></li>
+                    </ul>
+                    :
+                    <ul>
+                    
+                        <li><a href='/'>Home</a></li>
+                        <li><a href='/' onClick={ () => logout()}>Log Out</a></li>
+                    </ul>
+                }
                 <a href="resume.pdf" target="_blank"><button>Resume</button></a>
             </div>                        
         </header>

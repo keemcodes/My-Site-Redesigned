@@ -13,12 +13,12 @@ import { AuthContext } from '../Auth';
 
 
 function AdminRoute() {
-  const { isAuth } = useContext(AuthContext);
+  const { isAuth, logout } = useContext(AuthContext);
   console.log("App auth: ", isAuth);
 
     return (
       <>
-        <Header />
+        <Header admin='/'/>
         <main>
           <AbsoluteSides />  
           
@@ -27,7 +27,14 @@ function AdminRoute() {
               <>
                 
                 {isAuth ? (<Contacts forwardRef={ref} inView={inView} />) : (<Login forwardRef={ref} inView={inView} />)}
-                {isAuth ? (<h3>Logged in</h3>) : (<h3>Not Logged In</h3>)}
+                {isAuth ? (
+                <>
+                  <div className='logout'>
+                    <h3>Logged in</h3>
+                    <button onClick={() => logout()}>Logout</button>
+                  </div>
+                </>
+                ) : (<h3>Not Logged In</h3>)}
               </>
             )}
           </InView>
