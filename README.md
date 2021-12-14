@@ -9,6 +9,7 @@
 
 ## My-Site-Redesigned
 This is the official redesign of my portfolio site [keem.dev](http://keemcodes.com)
+Currently hosted at [keemcodes.com](http://keemcodes.com)
 
 ## Description
 Originally this was suppose to be a small HTML/JS project, then I started playing with React... then I started building an API... and there you have it, full stack portfolio application. Why does anyone need a fullstack portfolio application you might ask? No reason, none at all. This project was just me getting my feet wet with some frameworks I been oggling over the last few years. In this project I used React, Express, NodeJS and Sequelize. This is a good stepping stone to building some other potential full stack applications. 
@@ -36,7 +37,7 @@ System Stack
 ## Features
 * Retrieves and loads projects data supplied via Express API
 * Captures contact form data via HTTP POST to Express API
-* User authentication and persisted authorized sessions vi
+* User authentication and persisted authorized sessions
 
 ## Misc Details
 * Application runs on Apache for Linux
