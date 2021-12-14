@@ -228,7 +228,7 @@ async function forceSync() {
 }
 
 async function createContact(name, email, message) {
-await Contacts.create({ 
+await models.Contacts.create({ 
   name: name,
   email: email,
   message: message,

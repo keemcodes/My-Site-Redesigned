@@ -15,15 +15,12 @@ const isAuthenticated = require('../config/isAuthenticated');
     
     }).catch(error => console.log(error))
 
-  dbObject.findContacts().then(result => {
-      router.get('/contacts', isAuthenticated, (req, res) => {
-    
+    router.get('/contacts', isAuthenticated, (req, res) => { 
+      dbObject.findContacts().then(result => {
         res.status(200).json(result)
-        
-      })
-    
-    }).catch(error => console.log(error))
-    
+      }).catch(error => console.log(error))
+    })
+
     router.post('/formPost',
       body('name').not().isEmpty().trim().escape(),
       body('email').isEmail().normalizeEmail(),
