@@ -505,7 +505,14 @@ section:not(:first-of-type):not(:nth-of-type(2)) {
  
 }
 
-section:nth-of-type(1) {
+#login, #contacts {
+  /* margin-top: 200px; */
+  padding: 15vh 16px;
+  padding-top: 200px;
+  /* margin: 15vh 0px; */
+}
+
+section:not(#login):not(#contacts):nth-of-type(1) {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -579,6 +586,39 @@ p {
 p b {
   color: var(--my-rwhite);
   font-weight: 600;
+}
+b {
+  font-family: 'Work Sans', sans-serif;
+
+  color: var(--my-rwhite);
+  font-weight: 600;
+}
+
+.contact {
+  border: 3px solid var(--my-blue);
+  border-radius: 25px;
+  max-width: 500px;
+  margin: auto;
+  /* padding: 20px; */
+}
+
+.contact p b {
+  margin-right: 10px;
+}
+
+.contact-container {
+  padding: 10px;
+}
+
+.contact-container:not(:last-of-type) {
+  border-bottom: 3px solid var(--my-blue);
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.contact div {
+  /* margin-top: 5px; */
+  line-height: 25px;
 }
 
 ul {

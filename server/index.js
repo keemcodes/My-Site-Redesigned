@@ -1,118 +1,38 @@
 // Express
 const express = require('express');
+const session = require('express-session');
+const passport = require('passport');
 const app = express()
-const port = 3001
-// Database
-const { db } = require('./db');
-const dbObject = new db();
-const { body, validationResult } = require('express-validator');
+const port = process.env.PORT || 3001
 
+// Routes
+const routes = require('./routes')
+
+// Configs
 app.set('view engine', 'ejs');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'))
 
-
-// Testing use only
-// app.use(function(req, res, next) {
-//   res.header("Access-Control-Allow-Origin", "http://localhost:3000"); // update to match the domain you will make the request from
-//   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-//   next();
-// });
+// Express session middleware
+// =============================================
+app.use(session({ secret: 'notsuuch a secret', resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 
-// dbObject.findProjects().then(result => console.log(result))
-
-
-app.get('/api/users', (req, res) => {
-  
-    console.log(users);
-    res.render('users', { data: users });
-})
-app.get('/api/form', (req, res) => {
-  
-    res.render('form');
-})
-
-
-// Each request
-// app.get('/projects', (req, res) => {
-
-//   dbObject.findProjects().then(result => res.status(200).json(result))
-//   .catch(error => console.log(error))
-// })
-
-// On load...
-dbObject.findProjects().then(result => {
-  app.get('/api/projects', (req, res) => {
-
-    res.status(200).json(result)
-    
-  })
-
-}).catch(error => console.log(error))
+// Database testing
+// const { dbObject } = require('./config/dbObject')
+// dbObject.dropTables();
+// dbObject.sync()
+// dbObject.forceSync()
+// dbObject.addInitialProjects();
 
 
 
-app.get('/projectsView', (req, res) => {
-
-  res.render('projects', { data: projects });
-
-})
-
-  
-
-app.get('/json', (req, res) => {
-  res.json(users)
-})
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.post('/api', (req, res) => {
-  const user_id = req.body.id;
-  const token = req.body.token;
-  const geo = req.body.geo;
-  console.log(req.body)
-  // console.log(user_id, token, geo)
-  res.send({
-    'user_id': user_id,
-    'token': token,
-    'geo': geo
-  });
-});
-
-app.post('/api/formPost',
-  body('name').not().isEmpty().trim().escape(),
-  body('email').isEmail().normalizeEmail(),
-  body('message').not().isEmpty().trim().escape(),
- (req, res) => {
-  const name = req.body.name;
-  const email = req.body.email;
-  const message = req.body.message;
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) return res.status(400).json({ errors: errors.array() });   
-  console.log(name, email, message)
-  dbObject.createContact(name, email, message).catch(error => console.log(error));
-  res.send({ errors: { success: `Thank you ${name}, I've received your message`, } });
-});
-
-
-app.post('/formPost', (req, res) => {
-  const name = req.body.name2;
-  const email = req.body.email2;
-  const message = req.body.message2;
-  console.log(req.body)
-  // console.log(user_id, token, geo)
-  res.send({
-    'name': name,
-    'email': email,
-    'message': message
-  });
-  dbObject.createContact(name, email, message);
-});
-
+//  Routing...
+app.use('/api', routes)
 
 app.listen(port, () => {
   console.log(`Example app listening at http://localhost:${port}`)

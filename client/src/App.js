@@ -1,53 +1,41 @@
+// import { Routes, Route, Navigate } from "react-router-dom";
+import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 import './App.css';
-import Header from "./components/header";
-import Home from "./components/home";
-import About from './components/about';
-import Projects from './components/projects';
-import Employment from './components/employment';
-import Contact from './components/contact';
-import Footer from './components/footer';
-import AbsoluteSides from './components/absolute-sides';
-// import Test from './components/test';
-// import TestTwo from './components/test2';
-// import TestThree from './components/test3';
-import { InView } from 'react-intersection-observer';
+import { AuthProvider } from "./Auth";
+import Main from "./routes/Main";
+import LoginRoute from "./routes/LoginRoute";
+import AdminRoute from "./routes/AdminRoute";
 
 function App() {
-
+  const Pages = () => {
+    return(
+      <>
+        <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/login" element={<LoginRoute />} />
+          <Route path="/admin" element={<AdminRoute />} />
+          {/* <PrivateRoute path="/admin" element={<AdminRoute />} component={AdminRoute} /> */}
+        </Routes>
+      </>
+    );
+  }
   return (
     <>
-      <Header />
-      <main>
-        <AbsoluteSides />  
-        <InView>
-          {({ ref, inView, entry }) => (
-              <Home forwardRef={ref} inView={inView} />
-          )}
-        </InView>
-        <InView>
-          {({ ref, inView, entry }) => (
-              <About forwardRef={ref} inView={inView}/>
-          )}
-        </InView>
-        <InView>
-          {({ ref, inView, entry }) => (
-              <Projects forwardRef={ref} inView={inView} />
-          )}
-        </InView>
-        <InView>
-          {({ ref, inView, entry }) => (
-              <Employment forwardRef={ref} inView={inView} jobnames={['City of Atlanta', 'Nu Life Technologies', 'Next Generation Gaming', 'Team-DRD' ]}/>
-          )}
-        </InView>
-        <InView>
-          {({ ref, inView, entry }) => (
-              <Contact forwardRef={ref} inView={inView} />
-          )}
-        </InView>
-      </main>
-      <Footer />
+    <Router>
+      <AuthProvider>
+        <Pages />
+      </AuthProvider>
+    </Router>
     </>
   );
 }
+
+// export default () => {
+//   return (
+//     <AuthProvider>
+//       <App /> 
+//     </AuthProvider>
+//   );
+// };
 
 export default App;
