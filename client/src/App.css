@@ -613,13 +613,13 @@ b {
   margin-right: 10px;
 }
 
-.contact-container {
-  padding: 10px;
-}
 
-.contact-container:not(:last-of-type) {
+.contacts-container:not(:last-of-type) {
   border-bottom: 3px solid var(--my-blue);
   margin-bottom: 10px;
+  padding: 10px;
+}
+.contacts-container {
   padding: 10px;
 }
 
@@ -1077,13 +1077,18 @@ input, input[type=text] {
   color: var(--my-rwhite);
 }
 input:-webkit-autofill,
-input:-webkit-autofill:hover,
+input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active {
-    transition: background-color 5000000s ease-in-out 0s;
-  color: var(--my-rwhite);
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 1px solid var(--my-dgrey);
   -webkit-text-fill-color: var(--my-rwhite);
-
+  -webkit-box-shadow: 0 0 0px 1000px var(--my-dgrey) inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 input:focus, input:hover, textarea:hover, textarea:focus {
@@ -1093,7 +1098,7 @@ input:focus, input:hover, textarea:hover, textarea:focus {
 
 }
 input[type=text]::placeholder, textarea::placeholder {
-  color: var(--my-grey)
+  color: var(--my-grey);
 }
 input[type=submit] {
   font-family: 'Russo One', sans-serif;
@@ -1104,6 +1109,18 @@ input[type=submit] {
   height: 49px;
   border-radius: 5px;
   font-size: 17px;
+  transition: transform 100ms ease-in;
+}
+input[type=submit]:hover {
+  font-family: 'Russo One', sans-serif;
+  background-color: var(--my-blue);
+  color: var(--my-rwhite);
+  border: none;
+  width: 250px;
+  height: 49px;
+  border-radius: 5px;
+  font-size: 17px;
+  transform: scale(1.1);
 }
 textarea {
   width: 250px;
@@ -1115,6 +1132,19 @@ textarea {
   background: var(--my-dgrey);
   font-family: 'Work Sans', sans-serif;
   color: var(--my-white);
+  transition: transform 100ms ease-in;
+}
+
+textarea:hover, textarea:active, .input-icon-wrap input:hover {
+  transform: scale(1.05);
+
+}
+
+.input-icon-wrap i {
+  z-index: 1;
+}
+input[type=text] {
+  transition: transform 100ms ease-in;
 }
 
 .contact-form-header {

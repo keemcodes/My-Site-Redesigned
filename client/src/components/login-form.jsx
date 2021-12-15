@@ -57,7 +57,7 @@ function LoginForm() {
                     <label htmlFor="email">Password</label>
                     <div className="input-icon-wrap">
                         <i className="fas fa-key"></i>
-                        <input onChange={(e) => handle(e)} id='password' name='password' placeholder='' type="text" value={data.password}/>
+                        <input onChange={(e) => handle(e)} id='password' name='password' placeholder='' type="password" value={data.password}/>
                     </div>
                     <input type="submit" value="Login" />
                     <div className="success-message">
